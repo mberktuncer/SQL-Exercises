@@ -1,3 +1,14 @@
-select replacement_cost, rental_rate, min(length) from film
-group by replacement_cost, rental_rate
-order by replacement_cost;
+create table author(
+	id SERIAL primary key,
+	first_name varchar(50) not null,
+	last_name varchar(50) not null,
+	email varchar(100),
+	birthday DATE 
+);
+
+select * from author;
+
+
+insert into author(
+	
+)
