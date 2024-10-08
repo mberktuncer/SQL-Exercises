@@ -1,26 +1,13 @@
-create table author(
-	id SERIAL primary key,
-	first_name varchar(50) not null,
-	last_name varchar(50) not null,
-	email varchar(100),
-	birthday DATE 
-);
+select title, description from film;
 
-select * from author;
+select * from film 
+where length > 60 and length < 75;
 
+select * from film
+where rental_rate = 0.99 and (replacement_cost = 12.99 or replacement_cost = 28.99);
 
-insert into author(first_name, last_name, email, birthday)
-values
-	('Haruki', 'Murakami', 'haruki@murakami.com', '1948-11-07'),
-	('Sabahattin', 'Ali', 'sabahattin@ali.com', '1914-07-11'),
-	('Orhan', 'Pamuk', 'orhan@pamuk.com', '1950-04-14'),
-	('Halide Edip', 'Adıvar', 'halide@edip.com', '1884-07-11'),
-	('Zygmunt', 'Bauman', 'zygmunt@ali.com', '1911-07-12');
+select last_name from customer
+where first_name = 'Mary';
 
-
-update author
-set last_name = 'Updated'
-where first_name = 'Odetta'
-returning *;
-
-	
+select * from film
+where not length > 50 and not ( rental_rate = 2.99 or  rental_rate = 4.99);
