@@ -1,19 +1,19 @@
-select count(*) from film
-where length >
+SELECT COUNT(*) FROM film
+WHERE length >
 (
-	select avg(length) from film f 
+	SELECT AVG(length) FROM film f 
 );
 
 
-select count(*) from film
-where rental_rate =
+SELECT COUNT(*) FROM film
+WHERE rental_rate =
 (
-	select max(rental_rate) from film
+	SELECT MAX(rental_rate) FROM film
 );
 
 
-select * from film
-where 
+SELECT * FROM film
+WHERE 
 rental_rate = (SELECT MIN(rental_rate) FROM film) 
 AND 
 replacement_cost=(SELECT MIN(replacement_cost) FROM film);

@@ -1,12 +1,12 @@
-select distinct replacement_cost from film;
+SELECT DISTINCT replacement_cost FROM film;
 
-select count(distinct replacement_cost) from film;
+SELECT count(DISTINCT replacement_cost) FROM film;
 
-select count(title) from film
-where title like 'T%' and rating = 'G';
+SELECT count(title) FROM film
+where title LIKE 'T%' AND rating = 'G';
 
-select count(country) from country
-where country like '_____';
+SELECT count(country) FROM country
+where country LIKE '_____';
 
-select count(city) from city
-where city ilike '%R';
+SELECT count(city) FROM city
+where city ILIKE '%R';

@@ -1,15 +1,15 @@
-select * from film
-where title like '%n'
-order by length desc
-limit 5;
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5;
 
-select * from film
-where title like '%n'
-order by length 
-offset 5
-limit 5;
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length 
+OFFSET 5
+LIMIT 5;
 
-select * from customer
-where store_id = 1
-order by last_name 
-limit 4;
+SELECT * FROM customer
+WHERE store_id = 1
+ORDER BY last_name 
+LIMIT 4;

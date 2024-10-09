@@ -1,14 +1,14 @@
-select rating, count(*) from film
-group by rating;
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating;
 
-select replacement_cost, count(*) from film
-group by replacement_cost
-having count(*) > 50;
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost
+having COUNT(*) > 50;
 
-select store_id, count(*) from customer
-group by store_id;
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
 
-select country_id, count(*) from city
-group by country_id
-order by count(*) desc
+SELECT country_id, COUNT(*) FROM city
+GROUP BY country_id
+order BY COUNT(*) desc
 limit 1;

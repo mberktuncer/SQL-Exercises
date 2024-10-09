@@ -1,15 +1,15 @@
-(select first_name from actor)
-union
-(select first_name from customer);
+(SELECT first_name FROM actor)
+UNION
+(SELECT first_name FROM customer);
 
-(select first_name from actor)
-intersect
-(select first_name from customer);
+(SELECT first_name FROM actor)
+INTERSECT
+(SELECT first_name FROM customer);
 
-(select first_name from actor)
-except
-(select first_name from customer);
+(SELECT first_name FROM actor)
+EXCEPT
+(SELECT first_name FROM customer);
 
-(select first_name from actor)
-union all
-(select first_name from customer);
+(SELECT first_name FROM actor)
+UNION all
+(SELECT first_name FROM customer);
